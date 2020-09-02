@@ -1,0 +1,137 @@
+<div class="container">  
+    
+    <div class="row">
+        <div class="col">
+            <table class="table text-centered">
+                <tbody>
+                  <tr>
+                    <td colspan="5" style="text-align: center;"> 
+                        <canvas id='canvas' width="490" height="490" style="border: 5px solid pink;"></canvas> 
+                    </td>
+                    <td colspan="3" style="text-align: center;">
+                        <div class="chat-container">
+                            
+                            <main class="chat-main">
+                                <div class="chat-messages">
+                                    <div class="message2">
+                                        <p class="meta">Pictionary <span></span></p>
+                                        <p class="text">
+                                            Dobrodošli u Pictionary čet!
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </main>
+                            <div class="chat-form-container">
+                              <form id="chat-form">
+                                <input
+                                  id="msg"
+                                  type="text"
+                                  placeholder="Kucaj poruku"
+                                  required
+                                  autocomplete="off"
+                                  [(ngModel)]='messageText'
+                                  [ngModelOptions]="{standalone: true}"
+                                />
+                                <button class="btn btn-outline-primary" (click)="sendMessage('s')"><i class="fas fa-paper-plane"></i> Pošalji</button>
+                              </form>
+                            </div>
+                          </div>
+                    
+                    </td>
+                    <td>
+                        <table class="table hoverTable table-hover text-centered" *ngIf="currentPlayer">
+                            <thead>
+                                <th>Reč</th>
+                                <th>Biraj</th>
+                            </thead>
+                            <tr *ngFor="let w of diff.slice(0,3)">
+                                <td>{{w.rec}}</td>
+                                <td>
+                                    <button class="btn btn-info btn-outline-primary" (click)="biraj(w.rec)">biraj</button>
+                                </td>
+                                
+                            </tr>
+                        </table>
+                    </td>
+                    
+                  </tr>
+                 
+                  <tr>
+                    <td colspan="5">
+                      
+                        <div style="text-align: center;">
+                            <button class="btn btn-info btn-outline-primary" (click)="move('up')">kreni</button>
+                            &nbsp;&nbsp;
+                            <img id="pen" (click)="pen()" src="../../../assets/pen2.png" height="50" width="35">
+                            &nbsp; &nbsp;
+                            <img id="eraser" (click)="changeColor('white')" src="../../../assets/eraser2.png" height="50" width="50">
+                            &nbsp;&nbsp;
+                            <button id="clear" class="btn btn-info btn-outline-primary" (click)="clearCanvas()">očisti</button>
+                            
+                        </div>
+                      
+                    </td>
+                    <td colspan="4" class="tekst">
+                        Aktivnosti: <br>
+                        {{tekst}}
+                    </td>
+                </tr>  
+                  <tr>
+                    <td> 
+                        <img (click)="changeColor('black')" src="../../../assets/colors/black.png" height="50" width="50">
+
+                    </td>
+                    <td> 
+                        <img (click)="changeColor('red')" src="../../../assets/colors/red.png" height="50" width="50">
+
+                    </td>
+                    <td> 
+                        <img (click)="changeColor('#0083de')" src="../../../assets/colors/dark_blue.png" height="50" width="50">
+
+                    </td>
+                    <td> 
+                        <img (click)="changeColor('#9ffdff')" src="../../../assets/colors/light_blue.png" height="50" width="50">
+
+                    </td>
+                    <td> 
+                        <img (click)="changeColor('#00a23b')" src="../../../assets/colors/dark_green.png" height="50" width="50">
+
+                    </td>
+                  </tr>      
+                  <tr>
+                    <td> 
+                        <img (click)="changeColor('#8ddf00')" src="../../../assets/colors/light_green.png" height="50" width="50">
+
+                    </td>
+                    <td> 
+                        <img (click)="changeColor('#ff7ec4')" src="../../../assets/colors/pink.png" height="50" width="50">
+
+                    </td>
+                    <td> 
+                        <img (click)="changeColor('purple')" src="../../../assets/colors/purple.png" height="50" width="50">
+
+                    </td>
+                    <td> 
+                        <img (click)="changeColor('#be0000')" src="../../../assets/colors/maroon.png" height="50" width="50">
+
+                    </td>
+                    <td> 
+                        <img (click)="changeColor('yellow')" src="../../../assets/colors/yellow.png" height="50" width="50">
+
+                    </td>
+                  </tr>   
+                  <tr *ngIf="currentPlayer">
+                      <td colspan="5">
+                          <div>
+                            <button (click)="startGame()">Pokreni igru</button>
+                          </div>
+                      </td>
+                  </tr>
+
+                       
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+table{
+    padding-top: 0px;
+    margin-top: 20px;
+}
+
+.table tr{
+    text-align: center;
+}
+
+.txt{
+  color: aqua;
+}
+
+div{
+  text-align: center;
+}
+
+.hoverTable{
+	width:100%; 
+	border-collapse:collapse; 
+}
+	
+.hoverTable tr:hover {
+  background-color: rgba(255,206,235,0.5);
+}
+
+.btn-info, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #cef9eead !important;
+  color: black;
+}
+
+#t{
+  background-color: rgba(255,255,255,0.5);
+  align-content: center;
+  vertical-align: middle; 
+}

@@ -1,0 +1,48 @@
+<div class="container" id="page">
+    <div class="row">
+      <div class="col-sm">
+      </div>
+      <div class="col-sm">
+        <div id="fog">
+          <table class="table text-centered">
+          
+            <tbody>
+              <tr>
+                <td colspan="2"> 
+                  <img src="../../../assets/logo_round.png" class="img-fluid" height="600" width="600">
+                </td>
+              </tr>              
+            </tbody>
+          </table>
+          <table class="table table-hover text-centered hoverTable">
+          
+            <tbody>
+              <tr>
+                <td><b>Korisničko ime:</b></td>
+                <td>
+                  <input type='text' [(ngModel)]='korisnicko_ime' name='korisnicko_ime'>
+                </td>
+              </tr>
+              <tr>
+                <td><b>Lozinka:</b></td>
+              <td>
+                <input type='password' [(ngModel)]='lozinka' name='lozinka'>
+              </td>
+              </tr>
+              <tr>
+                <td>
+                  <b><a routerLink='/registration'>Napravi nalog</a></b>
+                </td>
+                <td>
+                  <button class="btn btn-dark" (click)='login()'><b>Login</b></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {{poruka}}
+      </div>
+      <div class="col-sm">
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,134 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+    
+        </div>
+        <div class="col-sm-5" style="text-align: center;">
+            <table class="table text-centered">
+          
+                <tbody>
+                  <tr>
+                    <td colspan="2"> 
+                      <img src="../../../assets/logo_round.png" class="img-fluid" height="150" width="150">
+                    </td>
+                  </tr>              
+                </tbody>
+              </table>
+        </div>
+        <div class="col-sm">
+    
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-sm">
+  
+      </div>
+      <div class="col-sm-5" style="text-align: center;">
+          <h3 style="padding-top: 0px;">
+              Registracija
+          </h3>
+      </div>
+      <div class="col-sm">
+  
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+          <div id="fog">
+            
+            <table class="table hoverTable table-hover text-centered" id="t">
+            
+              <tbody>
+                
+                <tr>
+                  <td>Ime:</td>
+                  <td>
+                      <input type="text" [(ngModel)]='ime' name='ime' >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Prezime:</td>
+                <td>
+                  <input type="text" [(ngModel)]='prezime' name='prezime' >
+                </td>
+                </tr>
+                <tr>
+                  <td>Korisničko ime:</td>
+                  <td>
+                      <input type="text" [(ngModel)]='korisnicko_ime' name='korisnicko_ime' >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                      Lozinka:
+                  </td>
+                  <td>
+                      <input id='input' type="password" [(ngModel)]='lozinka' name='lozinka' >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                      Ponovite lozinku: 
+                  </td>
+                  <td>
+                      <input type="password" [(ngModel)]='lozinka2' name='lozinka2' >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                      Mejl: 
+                                     
+                  </td>
+                  <td>
+                      <input type="text" [(ngModel)]='mejl' name='mejl' >                 
+                  </td>
+                </tr>
+               
+                <tr>
+                  <td>
+                      Photo:
+                      
+                  </td>
+                  <td>
+                    <input #file type="file" accept='image/*' (change)="preview(file.files)" />
+                    <img [src]="imgURL" height="200" *ngIf="imgURL">
+                  </td>
+                </tr>
+                
+                <tr>
+                    
+                  <td colspan="3">
+                    <div style="align-items: center;">
+                      <button class="btn btn-info btn-outline-primary" (click)="register()" ><b>Registruj se</b></button>
+                      &nbsp;&nbsp;
+                      <button class="btn btn-info btn-outline-primary" routerLink="/" >Odustani</button>
+                    </div>
+                  </td>
+                 
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          
+        </div>
+        <div class="col-sm">
+        </div>
+      </div>
+  
+      
+      <div class="row">
+          <div class="col-sm">
+          </div>
+          <div class="col-sm">
+            <span style='color: hotpink'>
+                {{poruka}}
+              </span>
+          </div>
+          <div class="col-sm">
+          </div>
+        </div>
+    </div>

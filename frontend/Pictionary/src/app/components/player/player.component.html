@@ -1,0 +1,91 @@
+<nav class="nav navbar-nav navbar-right">
+   
+  <a class="navbar-brand" routerLink="/player"> <!--NA PROFIL VODI-->
+      <span class="float-right">
+        <b class="linkovi">
+          Hi <img [src]="imgURL" height="50" *ngIf="imgURL" style=" border-radius: 50%"> !
+        </b>
+      </span>
+      
+    </a>
+    <a class="navbar-brand" routerLink="/"> 
+      <span class="float-right linkovi" style="font-size:medium; color: white;">
+        Odjavi se
+      </span>
+      
+    </a> 
+  </nav>  
+  
+<div class="container" id="page">
+    <div class="row">
+      <div class="col-sm">
+      </div>
+      <div class="col-sm-6">
+        <div id="fog">
+          <table class="table text-centered">
+          
+            <tbody>
+              <tr>
+                <td colspan="2"> 
+                  <div style="text-align:center"> 
+                    <img src="../../../assets/logo_round.png" class="img-fluid" height="350" width="350">
+                  </div>                </td>
+              </tr>              
+            </tbody>
+          </table>
+          <table class="table table-hover text-centered hoverTable">
+          
+            <tbody>
+              <tr>
+                <td>
+                  <tr>
+                    <td colspan="2">
+                    <input type="text" class="form-control" [(ngModel)]='link' name='link' placeholder="Link za poziv u igru" aria-label="Link za poziv u igru" aria-describedby="basic-addon2">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                    <input type="password" class="form-control" [(ngModel)]='lozinka' name='lozinka' placeholder="Lozinka sobe" aria-label="Lozinka sobe" aria-describedby="basic-addon2">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <button type="button" class="btn btn-info btn-lg btn-block" (click)="play()" ><b>Igraj!</b></button>
+                    </td>
+                  </tr>
+                </td>
+                <td>
+                  <tr>
+                    <td colspan="2">
+                    <input type="text" class="form-control" [(ngModel)]='new_room' name='new_room' placeholder="Naziv nove sobe" aria-label="Naziv nove sobe" aria-describedby="basic-addon2">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                    <input type="password" class="form-control" [(ngModel)]='password' name='password' placeholder="Lozinka nove sobe" aria-label="Lozinka nove sobe" aria-describedby="basic-addon2">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <button type="button" class="btn btn-dark btn-lg btn-block" (click)='create_room()'><b>Napravi sobu</b></button>
+                    </td>
+                  </tr>
+                </td>
+              </tr>
+              
+              <tr>
+                <td colspan="2">
+                    
+                    <div style="text-align:center">    
+                        <b><a routerLink='/about' style="text-align:center">Više informacija o aplikaciji</a></b>
+                      </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-sm">
+      </div>
+    </div>
+  </div>

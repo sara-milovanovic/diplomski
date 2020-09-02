@@ -1,0 +1,71 @@
+<nav class="nav navbar-nav navbar-right">
+    <a class="navbar-brand" routerLink="/admin"> <!--NA PROFIL VODI-->
+      <span class="float-right"><b class="linkovi">Hi admin <img [src]="imgURL" height="50" *ngIf="imgURL" style=" border-radius: 50%"> !</b></span> 
+    </a>
+    <a class="navbar-brand" routerLink="/"> 
+      <span class="float-right linkovi" style="font-size:medium; color: white;">
+        Odjavi se
+      </span>
+    </a> 
+  </nav>  
+  
+<div class="container" id="page">
+    <div class="row">
+      <div class="col-sm">
+      </div>
+      <div class="col-sm-6">
+        <div id="fog">
+          <table class="table text-centered">
+          
+            <tbody>
+              <tr>
+                <td colspan="2"> 
+                  <div style="text-align:center"> 
+                    <img src="../../../assets/logo_round.png" class="img-fluid" height="350" width="350">
+                  </div>
+                </td>
+              </tr>              
+            </tbody>
+          </table>
+          <table class="table table-hover text-centered hoverTable">
+          
+            <tbody>
+                            
+              <tr>
+                <td colspan="2">
+                  <button type="button" class="btn btn-outline-secondary btn-info btn-lg btn-block" routerLink="/accept_word_request"><b>Odobri reč</b></button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <button type="button" class="btn btn-outline-secondary btn-light btn-lg btn-block" routerLink='/accept_registration_request'><b>Odobri zahtev za registracijom</b></button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <button type="button" class="btn btn-outline-secondary btn-danger btn-lg btn-block" routerLink='/best_player'><b>Izaberi najboljeg igrača</b></button>
+                </td>
+              </tr>
+              
+              <tr>
+                <td colspan="2">
+                  <button type="button" class="btn btn-outline-secondary btn-dark btn-lg btn-block" routerLink='/delete_account'><b>Obriši nalog</b></button>
+                </td>
+              </tr>
+              
+              <tr>
+                <td colspan="2">
+                    
+                    <div style="text-align:center">    
+                        <b><a routerLink='/about' style="text-align:center">Više informacija o aplikaciji</a></b>
+                      </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-sm">
+      </div>
+    </div>
+  </div>

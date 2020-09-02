@@ -1,0 +1,41 @@
+.btn-danger, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #CEF9EE !important;
+    color: black;
+}
+
+/*.btn-danger, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #7bb7ff !important;
+    color: black;
+}*/
+
+.btn-info, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #F9E6E6 !important;
+    color: black;
+}
+
+.btn-dark, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    color: white;
+}
+
+.linkovi{
+    color: black;
+}
+
+.hoverTable{
+    width:100%; 
+    border-collapse:collapse; 
+}
+
+.hoverTable tr:hover {
+    background-color: rgba(255,206,235,0.5);
+}
+
+a:link{
+    color: darkblue;
+    font-size: x-large;
+    text-align:center;
+}
+  
+a:hover {
+    color: cornflowerblue;
+}

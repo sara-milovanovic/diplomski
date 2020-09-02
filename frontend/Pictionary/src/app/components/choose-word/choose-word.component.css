@@ -1,0 +1,34 @@
+.hoverTable{
+    width:100%; 
+    border-collapse:collapse;
+}
+
+.btn-info, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #cef9eead !important;
+    color: black;
+}
+
+table{
+    background-color: rgba(255,255,255,0.5);
+    align-content: center;
+    vertical-align: middle;
+    margin-top: 20%;
+}
+
+.hoverTable tr:hover {
+    background-color: rgba(255,206,235,0.5);
+}
+
+.linkovi{
+    color: black;
+}
+
+a:link{
+    color: darkblue;
+    font-size: x-large;
+    text-align:center;
+}
+  
+a:hover {
+    color: cornflowerblue;
+}

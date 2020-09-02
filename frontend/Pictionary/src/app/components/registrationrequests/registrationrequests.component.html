@@ -1,0 +1,45 @@
+<nav class="nav navbar-nav navbar-right">
+    <a class="navbar-brand" routerLink="/admin"> <!--NA PROFIL VODI-->
+      <span class="float-right"><b class="linkovi">Hi admin <img [src]="imgURL" height="50" *ngIf="imgURL" style=" border-radius: 50%"> !</b></span> 
+    </a>
+    <a class="navbar-brand" routerLink="/"> 
+        <span class="float-right linkovi" style="font-size:medium; color: white;">
+          Odjavi se
+        </span>
+        
+      </a> 
+</nav>  
+<div class="container">
+        <div class="row">
+            <div class="col-sm" >
+                <table class="table hoverTable table-hover text-centered">
+                    <thead>
+                        <th>Ime</th>
+                        <th>Prezime</th>
+                        <th>Korisničko ime</th>
+                        <th>Prihvati</th>
+                        <th>Odbaci</th>
+                    </thead>
+                    <tr *ngFor="let u of allRequests">
+                        <td>{{u.ime}}</td>
+                        <td>{{u.prezime}}</td>
+                        <td>{{u.korisnicko_ime}}</td>
+                        <td>
+                            <button class="btn btn-info btn-outline-primary" (click)="accept(u.korisnicko_ime)">prihvati</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-info btn-outline-primary" (click)="reject(u.korisnicko_ime)">odbaci</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div style="text-align:center"> 
+                     <button class="btn btn-info btn-outline-primary" routerLink="/admin">Gotovo</button>
+                </div>
+            </div>
+        </div>
+
+</div>
